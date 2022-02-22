@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/feature1",
+  "sourceRoot": "libs/feature1/src",
+  "prefix": "nx-vim",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/feature1"],
+      "options": {
+        "jestConfig": "libs/feature1/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/feature1/src/**/*.ts",
+          "libs/feature1/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
